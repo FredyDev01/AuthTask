@@ -1,0 +1,23 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "Tareas",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "idUser",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "Importancia",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "FechaPost",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

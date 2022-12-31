@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baumans&display=swap');
+
+
+body {
+    background: rgb(243, 243, 243);
+    color: rgb(60, 57, 57);
+    padding-top: 58px;
+    padding-right: 0 !important;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*-----------------------ANIMACION LOADER-----------------------*/
+
+.loader {
+  position: relative;
+  width: 64px;
+  height: 60px;
+}
+.loader::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #e1dfdf;
+  width: 74px;
+  height: 42px;
+  border-radius: 0 0 50px 50px;
+  animation: move 0.5s linear infinite alternate;
+}
+.loader::before {
+  content: '';
+  position: absolute;
+  left: 58%;
+  top: -9px;
+  background: #0173fa;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  transform: translateX(-50%) rotate(0deg);
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  100% { transform: translateX(-50%) rotate(360deg)}
+}
+@keyframes move {
+  0% { transform: rotate(10deg)}
+  100% { transform: rotate(-10deg)}
+}  
+
+.loader2 {
+  width: 48px;
+  height: 48px;
+  border: 5px solid;
+  border-color: #0a6ef8 transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader-check {
+  width: 16px;
+  height: 16px;
+  border: 2.5px solid #0a6ef8;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .loader-modal {
+    width: 26px;
+    height: 26px;
+    position: relative;
+    border-radius: 50%;
+    color: #7066e0;
+    animation: fill 1s ease-in infinite alternate;
+  }
+  .loader-modal::before , .loader-modal::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    left: 38px;
+    top: 0;
+    animation: fill 0.9s ease-in infinite alternate;
+  }
+  
+  .loader-modal::after {
+    left: auto;
+    right: 38px;
+    animation-duration: 1.1s;
+  }
+  
+  @keyframes fill {
+   0% {  box-shadow: 0 0 0 2px inset }
+   100%{ box-shadow: 0 0 0 10px inset }
+  }  
+
+  /*-----------------------ESTILOS PERSONALIZADOS-----------------------*/
+
+.subtitle{
+  font-family: 'PT Sans Caption';
+  font-size: 20px !important;
+}
+
+.tltModal{
+  font-family: 'Aldrich';
+  font-size: 20px !important;
+  font-weight: 300;
+}
+
+.iconText{
+  font-family: 'Baumans';
+  font-size: 20px !important;
+  font-weight: 400;
+}
+
+.txt-Descrip{
+    max-width: 650px;
+    margin: 0px 40px 0px 40px;
+}
+
+.ctnImageUser{
+  width: 200px;
+  height: 200px;
+  background: white;
+}
+
+.ctnRegImage{
+  width: 170px;
+  height: 170px;
+  background: rgb(231, 228, 228);
+}
+
+.text-xs{
+  font-size: 14px;
+}
+
+.text-xxs{
+  font-size: 12px;
+  cursor: auto;
+  margin-bottom: 0px !important;
+}
+
+.bg-ImpMed{
+  background: #f9a51b;
+}
+
+.swal2-styled{
+  font-weight: 300 !important;
+}
+
+.tltLoader{
+  color: #dbd5d5;
+  font-size: 36px;
+  font-weight: 700;
+}
