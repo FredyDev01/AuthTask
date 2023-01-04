@@ -17,7 +17,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./main.js" type="module"></script>
 </head>
-<body class="overflow-hidden">
+<body class="bodyBefore">    
     <!---------MENU--------->
     <nav class="navbar navbar-expand-lg bg-light px-3 shadow-sm fixed-top">
         <div class="container-fluid">
@@ -36,13 +36,13 @@
                 </div>
             </div>
         </div>
-    </nav>  
+    </nav>
     <!---------lOADER PAGE--------->
-    <div class="w-100 h-100 bg-light fixed-top d-flex flex-column justify-content-center align-content-center" id="Loader">
-        <div class="d-flex justify-content-center align-content-lg-center mx-auto">
+    <div class="w-100 h-100 bg-light fixed-top d-flex flex-column justify-content-center align-items-center" id="Loader">
+        <div class="d-flex">
             <span class="loader"></span>            
         </div>
-        <h1 class="mx-auto mt-4 tltLoader">Cargando...</h1>
+        <h1 class="pt-4 tltLoader">Cargando...</h1>        
     </div>
     <!---------CONTENEDOR PRINCIPPAL--------->
     <section class="container mx-auto py-5 px-5" id="CtnSinSession">
@@ -54,7 +54,7 @@
             logearte con una red social (Facebook, Github o Google).         
         </p>
     </section>
-    <section class="container px-4 py-5" id="CtnConSession">
+    <section class="container px-4 py-5 d-none" id="CtnConSession">
         <div class="ctnImageUser rounded-circle overflow-hidden mx-auto">
             <img class="w-100 h-100 img-fluid" id="ImageUser" alt="UserAnonimo" referrerpolicy="no-referrer">
         </div>

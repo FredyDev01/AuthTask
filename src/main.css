@@ -6,12 +6,21 @@
 body {
     background: rgb(243, 243, 243);
     color: rgb(60, 57, 57);
-    padding-top: 58px;
-    padding-right: 0 !important;
-    min-height: 100vh;
+    padding-right: 0 !important;    
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.bodyBefore{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bodyAfter{
+  padding-top: 58px;
+  min-height: 100vh;
 }
 
 /*-----------------------ANIMACION LOADER-----------------------*/
