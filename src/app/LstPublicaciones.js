@@ -24,14 +24,14 @@ export const listarData = async(User)=>{
         AllData.forEach(e=>{
             var Task = e.data() 
             content += `
-            <li class="px-3 list-group-item list-group-item-action d-flex justify-content-between align-items-center cursor-pointer" id="${e.id}" role="button">
+            <li class="px-3 list-group-item list-group-item-action d-flex justify-content-between align-items-center cursor-pointer" data-idElement="${e.id}" role="button">
                 <div class="d-flex align-items-center justify-content-center">
-                    <span class="loader-check d-none me-2" id="load-${e.id}"></span>
-                    <input type="checkbox" class="form-check-input me-2 mt-0" id="task-${e.id}" ${Task.Estado ? 'checked' : ''} />                    
-                    <label class="form-s=check-label" for="task-${e.id}">${Task.Tarea}</label>                    
+                    <span class="loader-check d-none" id="load-${e.id}"></span>
+                    <input type="checkbox" class="form-check-input mt-0" id="task-${e.id}" ${Task.Estado ? 'checked' : ''} />                    
+                    <label class="ms-2 me-4 form-s=check-label text-xs" for="task-${e.id}">${Task.Tarea}</label>                    
                 </div>
                 <div class="d-flex">
-                    <p class="${Task.Importancia == 3 ? 'bg-danger': Task.Importancia == 2 ? 'bg-ImpMed' : 'bg-success'} px-3 py-2 text-light rounded-5 text-xxs">${Task.Importancia == 3 ? 'Alta' : Task.Importancia == 2 ? 'Media' : 'Baja'}</p>
+                    <p class="${Task.Importancia == 3 ? 'bg-danger': Task.Importancia == 2 ? 'bg-ImpMed' : 'bg-success'} px-3 py-2 text-light rounded-5 text-xxs" data-idElement="${e.id}">${Task.Importancia == 3 ? 'Alta' : Task.Importancia == 2 ? 'Media' : 'Baja'}</p>
                 </div>                                
             </li>`            
             

@@ -141,9 +141,9 @@ CtnTask.addEventListener('change', async(e)=>{
 })
 
 //Opciones para el usuario
-CtnTask.addEventListener('click', (e)=>{
-    const idTask = e.target.id
-    if(e.target.tagName == 'LI' && idTask){
+CtnTask.addEventListener('click', (e)=>{    
+    if(e.target.tagName == 'LI' || e.target.tagName == 'P'){
+        const idTask = e.target.dataset.idelement
         Swal.fire({
             icon: 'question',
             title: '¿Que desea hacer?',
