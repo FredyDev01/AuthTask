@@ -2,7 +2,7 @@ import { createUserWithEmailAndPassword, updateProfile } from "https://www.gstat
 import { uploadString, getDownloadURL, ref } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-storage.js"
 import { MostrarMSG, LoadMSG, GestErr } from './MostrarMensaje.js'
 import { storage, auth } from "./firebase.js"
-import { listarData } from './LstPublicaciones.js'
+import { listarData } from './LsTareas.js'
 import { vrfUser } from './vrfSesion.js'
 
 

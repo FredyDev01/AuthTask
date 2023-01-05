@@ -1,7 +1,7 @@
 import { collection, doc, getDocs, getDoc, addDoc, deleteDoc, setDoc, query, where, documentId } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js'
 import { db, auth } from './firebase.js'
 import { MostrarMSG, LoadMSG, GestErr } from './MostrarMensaje.js'
-import { listarData } from '../app/LstPublicaciones.js'
+import { listarData } from '../app/LsTareas.js'
 
 
 const Modal = document.querySelector('#ModalNewPost')
