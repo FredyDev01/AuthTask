@@ -77,8 +77,7 @@ BtnLogGitHub.addEventListener('click', async()=>{
         const Provider = new GithubAuthProvider()
         const Credentials = await signInWithPopup(auth, Provider)
         InstModal.hide()
-        MostrarMSG(`Hola, ${Credentials.user.email}`,
-        'Hemos podido validar su cuenta de github y pudimos logear su usuario dentro de nuestra aplicacion.')        
+        MostrarMSG(`Hola, ${Credentials.user.email}`, 'Hemos podido validar su cuenta de github y pudimos logear su usuario dentro de nuestra aplicacion.')        
     }catch(err){
         console.log(err)
         GestErr(err)

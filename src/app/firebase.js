@@ -3,7 +3,6 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth
 import { getFirestore } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js"
 import { getStorage } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-storage.js"
 
-
 const firebaseConfig = {
   apiKey: "AIzaSyBTIGvlwCVl0OYTv9CAncsunIpzNKwrdcY",
   authDomain: "fir-autenticacion-3f34e.firebaseapp.com",

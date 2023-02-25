@@ -1,6 +1,6 @@
 const InpsReg = document.querySelectorAll('#FormRegistro input')
 const InpsLog = document.querySelectorAll('#FormLogin input')
-const InpsTask = document.querySelectorAll('#FormNewTarea input')
+const InpsTask = document.querySelectorAll('#FormNewTarea select, textarea')
 
 
 /*---------------FUNCIONES DE VALIDACION---------------*/
@@ -47,7 +47,7 @@ export function ValLogin(){
 export function ValTask(){
     const EstadoTask = []
     InpsTask.forEach(e => {
-        EstadoTask.push({'id': e.id, 'Estado': e.value.length == 0 ? false : true})
+        EstadoTask.push({'id': e.id, 'Estado': !e.value.length ? false : true})
     })
     const CorrectTask = EstadoTask.every(i => i.Estado)
     if(!CorrectTask) SetEstilos(EstadoTask)

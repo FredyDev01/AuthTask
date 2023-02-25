@@ -13,12 +13,10 @@ export const vrfUser = user =>{
     document.body.classList.remove('bodyBefore')    
     document.body.classList.add('bodyAfter')
     if(user){        
-        //Ocultar secciones
         NavSession.forEach(e => e.classList.add('d-none'))
         CloseSession.forEach(a => a.classList.remove('d-none'))                
         CtnSinSession.classList.add('d-none')
         CtnConSession.classList.remove('d-none')
-        //Rellenar data
         ImgUser.setAttribute('src', user.photoURL ? user.photoURL + '?timestamp=' + new Date().toLocaleTimeString() : './assets/UserAnonimo.png')
         NameUser.textContent = user.displayName ? user.displayName : 'Anonimo'
         EmailUser.textContent = user.email

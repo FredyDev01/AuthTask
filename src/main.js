@@ -7,7 +7,6 @@ import './app/Login.js'
 import './app/GestAcciones.js'
 import './app/CerrarSesion.js'
 
-
 onAuthStateChanged(auth, user => {    
     if(user){    
         if(user.providerData[0].providerId != 'password' || user.displayName && user.photoURL){
@@ -15,7 +14,6 @@ onAuthStateChanged(auth, user => {
             listarData(user)                
         }        
     }else{
-        listarData(null)    
-        vrfUser(null)        
+        listarData(null), vrfUser(null)
     }
 })
