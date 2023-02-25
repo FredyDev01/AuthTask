@@ -19,7 +19,7 @@ export const vrfUser = user =>{
         CtnSinSession.classList.add('d-none')
         CtnConSession.classList.remove('d-none')
         //Rellenar data
-        ImgUser.setAttribute('src', user.photoURL ? user.photoURL: './assets/UserAnonimo.png')
+        ImgUser.setAttribute('src', user.photoURL ? user.photoURL + '?timestamp=' + new Date().toLocaleTimeString() : './assets/UserAnonimo.png')
         NameUser.textContent = user.displayName ? user.displayName : 'Anonimo'
         EmailUser.textContent = user.email
         PhoneUser.textContent = user.phoneNumber ? user.phoneNumber : 'Desconocido'

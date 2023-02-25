@@ -5,14 +5,14 @@ import { db } from './firebase.js'
 const LstPublicaciones = document.querySelector('#showPublicaciones')
 
 
+/*---------------CONSULTA Y LISTADO DE TAREAS---------------*/
+
 export const listarData = async(User)=>{
-    //Efeto de carga 
     LstPublicaciones.innerHTML = `
     <li class="py-2 d-flex flex-column justify-content-center align-items-center">
         <span class="loader2"></span>
     </li>
     `
-    //Busqueda de datos
     var AllData = []     
     if(User){
         const id = User.uid

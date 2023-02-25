@@ -55,7 +55,7 @@
         </p>
     </section>
     <section class="container px-4 py-5 d-none" id="CtnConSession">
-        <div class="ctnImageUser rounded-circle overflow-hidden mx-auto">
+        <div class="mx-auto rounded-circle overflow-hidden shadow-sm ctnImageUser">
             <img class="Image-Full" id="ImageUser" alt="UserAnonimo" referrerpolicy="no-referrer">
         </div>
         <h1 class="mx-auto mt-3 text-center title" id="nameUser" style="max-width: 500px"></h1>
@@ -79,11 +79,17 @@
                 </div>
                 <div class="modal-body">
                     <form id="FormLogin">
-                        <label class="form-label" for="LogEmail">Correo:</label>
-                        <input type="email" class="form-control mb-3" id="LogEmail" placeholder="example@gmail.com" required>
-                        <label class="form-label" for="LogPassword">Contraseña:</label>
-                        <input type="password" class="form-control mb-4" id="LogPassword" placeholder="********" required>
-                        <button class="btn btn-outline-success">Loguearse</button>
+                        <div class="mb-3">
+                            <label class="form-label" for="LogEmail">Correo:</label>
+                            <input type="email" class="form-control" id="LogEmail" placeholder="example@gmail.com">
+                            <div class="invalid-feedback">El correo no tiene el '@' o el '.com'.</div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="LogPassword">Contraseña:</label>
+                            <input type="password" class="form-control" id="LogPassword" placeholder="********">
+                            <div class="invalid-feedback">La contraseña no tiene 8 caracteres.</div>
+                        </div>
+                        <button class="btn btn-outline-success">Loguearse</button>                        
                     </form>
                     <div class="mt-5 d-flex flex-column flex-sm-row">
                         <button class="btn btn-danger w-100" id="logGoogle">Google <i class="fab fa-google ms-1"></i></button>
@@ -106,13 +112,30 @@
                         <div class="ctnRegImage rounded-circle overflow-hidden shadow-sm mx-auto mb-4">
                             <img class="Image-Full" id="RegImagePerfil" src="assets/UserAnonimo.png" alt="AvatarPerfil">
                         </div>
-                        <input type="file" class="form-control my-3 text-secondary" id="RegFoto" accept=".jpg,.png,.gif" required>
-                        <label class="form-label" for="RegNombre">Nombre:</label>
-                        <input type="text" class="form-control mb-3" id="RegNombre" placeholder="Jhon Doe" required>
-                        <label class="form-label" for="RegEmail">Correo:</label>
-                        <input type="email" class="form-control mb-3" id="RegEmail" placeholder="example@gmail.com" required>
-                        <label class="form-label" for="RegPassword">Contraseña:</label>
-                        <input type="password" class="form-control mb-4" id="RegPassword" placeholder="********" required>                     
+                        <div class="my-3">
+                            <input type="file" class="form-control text-secondary" id="RegFoto" accept=".jpg,.png,.gif">
+                            <div class="invalid-feedback">Ninguna foto de perfil seleccionada.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="RegNombre">Nombre:</label>
+                            <input type="text" class="form-control" id="RegNombre" placeholder="Jhon Doe">
+                            <div class="invalid-feedback">El nombre esta vacio.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="RegEmail">Correo:</label>
+                            <input type="email" class="form-control" id="RegEmail" placeholder="example@gmail.com">
+                            <div class="invalid-feedback">El correo no tiene el '@' o el '.com'.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="RegPassword">Contraseña:</label>
+                            <input type="password" class="form-control" id="RegPassword" placeholder="********">                     
+                            <div class="invalid-feedback">La contraseña no tiene 8 caracteres.</div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="RepPassword">Repetir Contraseña:</label>
+                            <input type="password" class="form-control" id="RepPassword" placeholder="********">                     
+                            <div class="invalid-feedback">La contraseña no coincide o no tiene 8 caracteres.</div>
+                        </div>
                         <button type="submit" class="btn btn-outline-primary">Registrar</button>
                     </form>
                 </div>
@@ -127,14 +150,20 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="FormNewTarea" data-indEstado="0">
-                        <textarea class="form-control mt-2 mb-3" id="txtTarea" placeholder="Ingrese la tarea" style="min-height: 150px; max-height: 220px;"></textarea>
-                        <select id="txtImportancia" class="form-select text-secondary mb-4">
-                            <option value="">Seleccione la importancia</option>
-                            <option value="3">Alta</option>
-                            <option value="2">Media</option>
-                            <option value="1">Baja</option>
-                        </select>
+                    <form id="FormNewTarea" data-Estado="0">
+                        <div class="mb-3">
+                            <textarea class="form-control mt-2" id="txtTarea" placeholder="Ingrese la tarea" style="min-height: 150px; max-height: 220px;"></textarea>
+                            <div class="invalid-feedback">No ingreso ninguna tarea.</div>
+                        </div>
+                        <div class="mb-4">
+                            <select id="txtImportancia" class="form-select text-secondary">
+                                <option value="">Seleccione la importancia</option>
+                                <option value="3">Alta</option>
+                                <option value="2">Media</option>
+                                <option value="1">Baja</option>
+                            </select>
+                            <div class="invalid-feedback">Ninguna opcion seleccionada.</div>
+                        </div>
                         <button type="submit" class="btn btn-outline-primary" id="btnEnvTarea">Agregar</button>
                     </form>
                 </div>
